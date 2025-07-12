@@ -1,4 +1,5 @@
-from views import register, login, logout
+from views import register, login, logout, show_all_users
+from admin_views import *
 
 
 def auth_menu():
@@ -42,17 +43,17 @@ def admin_menu():
     """)
     choice = input("Choice: ")
     if choice == "1":
-        pass
+        add_food()
     elif choice == "2":
-        pass
+        delete_food()
     elif choice == "3":
-        pass
+        view_menu()
     elif choice == "4":
-        pass
+        view_orders()
     elif choice == "5":
-        pass
+        view_order_histore()
     elif choice == "6":
-        pass
+        show_all_users()
     elif choice == "7":
         print("Good bye")
         return logout()
