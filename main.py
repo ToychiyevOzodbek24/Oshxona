@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-from views import register, login
 from user_views import *
-=======
 from views import register, login, logout, show_all_users
 from admin_views import *
->>>>>>> 108ff929a87863981becdd3b164dd06b8cc2949a
 
 
 def auth_menu():
