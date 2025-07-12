@@ -1,5 +1,5 @@
 from views import register, login, logout
-
+from ucer_views import *
 
 def auth_menu():
     print("""
@@ -32,13 +32,13 @@ def auth_menu():
 
 def admin_menu():
     print("""
-    1. Ovqat qo‘shis
-    2. Ovqat o‘chirish
-    3. Menyuni ko‘rish
-    4. Buyurtmalarni ko‘rish
-    5. Buyurtmalar tarixini ko‘rish
-    6. Foydalanuvchilarni ko‘rish
-    7. Chiqish
+    1. Add Food  
+    2. Delete Food  
+    3. View Menu  
+    4. View Orders  
+    5. View Order History  
+    6. View Users  
+    7. Exit
     """)
     choice = input("Choice: ")
     if choice == "1":
@@ -72,13 +72,13 @@ def user_menu():
 
     choice = input("Choice: ")
     if choice == "1":
-        pass
+        view_menu()
     elif choice == "2":
-        pass
+        place_order()
     elif choice == "3":
-        pass
+        my_orders()
     elif choice == "4":
-        pass
+        cancel_order()
     elif choice == "5":
         print("Good bye")
         return logout()
