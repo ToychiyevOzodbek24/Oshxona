@@ -1,5 +1,5 @@
 from views import register, login, logout
-from ucer_views import *
+
 
 def auth_menu():
     print("""
@@ -72,13 +72,13 @@ def user_menu():
 
     choice = input("Choice: ")
     if choice == "1":
-        view_menu()
+        pass
     elif choice == "2":
-        place_order()
+        pass
     elif choice == "3":
-        my_orders()
+        pass
     elif choice == "4":
-        cancel_order()
+        pass
     elif choice == "5":
         print("Good bye")
         return logout()
