@@ -1,3 +1,5 @@
+from views import register, login, logout
+
 
 def auth_menu():
     print("""
@@ -7,9 +9,19 @@ def auth_menu():
     """)
     choice = input("Choice: ")
     if choice == "1":
-        pass
+        if register():
+            print("Successfully registered")
+        else:
+            print("Something went wrong")
     elif choice == "2":
-        pass
+        result = login()
+        if result == "admin":
+            print("Welcome my owner")
+            return admin_menu()
+        elif result == "user":
+            return user_menu()
+        else:
+            return login()
     elif choice == "3":
         print("Good bye")
         return None
@@ -42,8 +54,8 @@ def admin_menu():
     elif choice == "6":
         pass
     elif choice == "7":
-        pass
-        return auth_menu()
+        print("Good bye")
+        return logout()
     else:
         print("Invalid choice")
     return admin_menu()
@@ -69,15 +81,16 @@ def user_menu():
         pass
     elif choice == "5":
         print("Good bye")
-        return None
+        return logout()
     else:
-        pass
-        return auth_menu()
+        print("Invalid choice")
+        return user_menu()
 
     return user_menu()
 
 
 if __name__ == '__main__':
+    logout()
     auth_menu()
 
 
