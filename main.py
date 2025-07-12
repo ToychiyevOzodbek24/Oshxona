@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 from views import register, login
 from user_views import *
+=======
+from views import register, login, logout, show_all_users
+from admin_views import *
+>>>>>>> 108ff929a87863981becdd3b164dd06b8cc2949a
 
 
 def auth_menu():
@@ -43,20 +48,20 @@ def admin_menu():
     """)
     choice = input("Choice: ")
     if choice == "1":
-        pass
+        add_food()
     elif choice == "2":
-        pass
+        delete_food()
     elif choice == "3":
-        pass
+        view_menu()
     elif choice == "4":
-        pass
+        view_orders()
     elif choice == "5":
-        pass
+        view_order_histore()
     elif choice == "6":
-        pass
+        show_all_users()
     elif choice == "7":
-        pass
-        return auth_menu()
+        print("Good bye")
+        return logout()
     else:
         print("Invalid choice")
     return admin_menu()
@@ -83,13 +88,14 @@ def user_menu():
         cancel_order()
     elif choice == "5":
         print("Good bye")
-        return None
+        return logout()
     else:
-        pass
-        return auth_menu()
+        print("Invalid choice")
+        return user_menu()
 
     return user_menu()
 
 
 if __name__ == '__main__':
+    logout()
     auth_menu()

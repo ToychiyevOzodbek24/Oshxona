@@ -19,8 +19,11 @@ def get_random_code(email: str):
 
 
 def send_mail(receiver_email, body):
-    sender_email = "toychiyevozodbek647@gmail.com"
-    password = "zdxy hxjg zwrw rknd"
+    # sender_email = "toychiyevozodbek647@gmail.com"
+    # password = "zdxy hxjg zwrw rknd"
+
+    sender_email = "xamidullo2105@gmail.com"
+    password = "gcyb fllo ofcs oihj"
 
     subject = "Confirmation code"
 
