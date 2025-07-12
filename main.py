@@ -1,3 +1,6 @@
+from views import register, login
+from user_views import *
+
 
 def auth_menu():
     print("""
@@ -7,9 +10,19 @@ def auth_menu():
     """)
     choice = input("Choice: ")
     if choice == "1":
-        pass
+        if register():
+            print("Successfully registered")
+        else:
+            print("Something went wrong")
     elif choice == "2":
-        pass
+        result = login()
+        if result == "admin":
+            print("Welcome my owner")
+            return admin_menu()
+        elif result == "user":
+            return user_menu()
+        else:
+            return login()
     elif choice == "3":
         print("Good bye")
         return None
@@ -51,22 +64,23 @@ def admin_menu():
 
 def user_menu():
     print("""
-    1. Menyuni ko‘rish
-    2. Buyurtma berish
-    3. Mening buyurtmalarim
-    4. Buyurtmani bekor qilish
-    5. Chiqish
+    1. View Menu  
+    2. Place Order  
+    3. My Orders  
+    4. Cancel Order  
+    5. Exit
+
     """)
 
     choice = input("Choice: ")
     if choice == "1":
-        pass
+        view_menu()
     elif choice == "2":
-        pass
+        place_order()
     elif choice == "3":
-        pass
+        my_orders()
     elif choice == "4":
-        pass
+        cancel_order()
     elif choice == "5":
         print("Good bye")
         return None
@@ -79,9 +93,3 @@ def user_menu():
 
 if __name__ == '__main__':
     auth_menu()
-
-
-
-
-
-
