@@ -86,7 +86,7 @@ def user_menu():
     elif choice == "4":
         cancel_order()
     elif choice == "5":
-        pass
+        today_orders()
     elif choice == "6":
         print("Good bye")
         return logout()
