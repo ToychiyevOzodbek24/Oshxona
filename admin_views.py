@@ -11,6 +11,7 @@ def add_food():
     print("Ovqat qo'shildi.")
 
 def delete_food():
+    view_menu()
     menu = read("menu")
     food_id = input("O'chirmoqchi bo'lgan taom ID: ")
     
@@ -68,3 +69,4 @@ def process_orders():
         t.join()
 
     print("Barcha buyurtmalar tayyor.")
+    view_menu()
