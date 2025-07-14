@@ -39,8 +39,9 @@ def admin_menu():
     3. View Menu  
     4. View Orders  
     5. View Order History  
-    6. View Users  
-    7. Exit
+    6. View Users
+    7. Process orders  
+    8. Exit
     """)
     choice = input("Choice: ")
     if choice == "1":
@@ -56,6 +57,8 @@ def admin_menu():
     elif choice == "6":
         show_all_users()
     elif choice == "7":
+        process_orders()
+    elif choice == "8":
         print("Good bye")
         return logout()
     else:
@@ -68,9 +71,9 @@ def user_menu():
     1. View Menu  
     2. Place Order  
     3. My Orders  
-    4. Cancel Order  
-    5. Exit
-
+    4. Cancel Order
+    5. Today orders  
+    6. Exit
     """)
 
     choice = input("Choice: ")
@@ -83,6 +86,8 @@ def user_menu():
     elif choice == "4":
         cancel_order()
     elif choice == "5":
+        pass
+    elif choice == "6":
         print("Good bye")
         return logout()
     else:
