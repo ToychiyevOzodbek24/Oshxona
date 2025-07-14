@@ -70,12 +70,3 @@ def logout():
         users[index][-2] = False
     writerows(filename="users", data=users)
 
-
-def show_all_users():
-    users = read(filename="users")
-    if not users:
-        print("No users yet")
-        return
-
-    for user in users:
-        print(f"ID: {user[0]} {user[1]}\t{user[2]}\t{user[3]}\t{user[4]}\t{user[5]}\t{user[6]}")

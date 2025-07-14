@@ -1,5 +1,5 @@
 from user_views import *
-from views import register, login, logout, show_all_users
+from views import register, login, logout
 from admin_views import *
 
 
