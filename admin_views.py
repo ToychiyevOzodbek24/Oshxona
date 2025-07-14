@@ -69,4 +69,8 @@ def process_orders():
         t.join()
 
     print("Barcha buyurtmalar tayyor.")
-    view_menu()
+    
+    show_order = read(filename="orders")
+    for row in show_order:
+        if row[3] == "ready":
+            print(f"{row[0]}. {row[1]} - {row[2]}, {row[3]},  {row[4]}x, ({row[5]})")
