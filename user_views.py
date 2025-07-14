@@ -23,7 +23,12 @@ def place_order():
     amount = input("Nechta buyurtma: ")
 
     menu = read("menu")
-    food = next((x for x in menu if x[0] == food_id), None)
+    food = None
+    for x in menu:
+        if x[0] == food_id:
+            food = x
+            break
+
     if not food:
         print("Taom topilmadi.")
         return
